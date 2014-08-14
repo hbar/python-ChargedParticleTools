@@ -1,0 +1,17 @@
+*.py~
+*.txt~
+*.dat~
+*.pyc
+output/geometry/*
+output/sigma/*
+VintageCode/
+VintageCode/*
+output/
+data/sigma_trace3d/
+data/Sigma_Trace3d/
+.gitignore~
+*.sh~
+*.md~
+*.pyc
+*~
+.metadata

@@ -1,4 +1,4 @@
 python-ChargedParticleTools
 ===========================
 
-A collection of methods calculating charged particle interactions with materials
+A collection of simple tool for modeling charged particle interactions with materials
