@@ -20,6 +20,7 @@ XB.PlotAttenuation()
 XMo.PlotAttenuation()
 XW.PlotAttenuation()
 pl.legend()
+pl.title('Mass Attenuation Coefficients')
 
 
 pl.figure();
@@ -27,6 +28,7 @@ XB.MeanFreePath(Rho=RhoB)
 XMo.MeanFreePath(Rho=RhoMo)
 XW.MeanFreePath(Rho=RhoW)
 pl.xlim(0,50e3)
+pl.title('Photon Mean Free Path \n for material at solid denisity')
 pl.legend()
 
 pl.figure(); 
@@ -34,12 +36,17 @@ pl.figure();
 #XMo.Intensity(PhotonE=16e3,Rho=RhoMo) 
 dX,I1=XMo.Intensity(PhotonE=MoL,Rho=RhoMo)
 dX,I2=XMo.Intensity(PhotonE=MoK,Rho=RhoMo)
-pl.semilogx(dX,I1/I2)
+pl.semilogx(dX,I1/I2,'--')
+pl.title('Photon attenuation vs distance in Molybdenum')
+pl.legend(('Mo(L) line','Mo(K) line','Mo(K)/Mo(L)'))
 
 pl.figure(); 
 dX,I1=XB.Intensity(PhotonE=MoL,Rho=RhoB)
 dX,I2=XB.Intensity(PhotonE=MoK,Rho=RhoB)
+pl.semilogx(dX,I1/I2,'--')
+pl.title('Photon attenuation vs distance in Boron')
+pl.legend(('Mo(L) line','Mo(K) line','Mo(K)/Mo(L)'))
 
-pl.figure()
-pl.semilogx(dX,I1)
+#pl.figure()
+#pl.semilogx(dX,I1)
 pl.show()

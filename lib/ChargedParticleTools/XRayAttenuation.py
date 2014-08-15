@@ -34,6 +34,8 @@ class Attenuation:
 		if Plot==True:
 #			pl.loglog(Distance,IAtten)
 			pl.semilogx(Distance,IAtten)
+			pl.xlabel('Distance [m]')
+			pl.ylabel('Relative Intensity [I/Io]')
 		return Distance,IAtten
 		
 
