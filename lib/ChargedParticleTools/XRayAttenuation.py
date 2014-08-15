@@ -21,7 +21,7 @@ class Attenuation:
 	def MeanFreePath(self,Rho=10.28,Plot=True):
 		self.MFP = 1.0/(Rho*self.Mu) * 1e-2
 		if Plot==True:
-			pl.loglog(self.Energy,self.MFP)
+			pl.loglog(self.Energy,self.MFP,label=self.Label)
 			pl.xlabel('Energy [eV]')
 			pl.ylabel('Mean Free Path [m]')
 
@@ -34,6 +34,6 @@ class Attenuation:
 		if Plot==True:
 #			pl.loglog(Distance,IAtten)
 			pl.semilogx(Distance,IAtten)
-		return IAtten
+		return Distance,IAtten
 		
 
