@@ -1,17 +1,19 @@
 from numpy import *
 import pylab as pl
+from Element import *
 
 TestRange=logspace(-8,-4,1000)
 
 class Attenuation:
 	def __init__(self,Z=42):
+		self.element = Element(Z)
 		self.Path0 = '../data/XRayAttenuation/'
 		self.FileName = str(Z)+'XRayAttenuation.txt'
 		self.Data = genfromtxt(self.Path0+self.FileName,skiprows=11)
 		self.Energy = self.Data[:,0]*1e6
 		self.Mu = self.Data[:,1] # cm^2/g
 		self.MuEnergy = self.Data[:,2] # cm^2/g
-		self.Label='Z = '+ str(Z)
+		self.Label= self.element.Symbol #'Z = '+ str(Z)
 
 	def PlotAttenuation(self):
 		pl.loglog(self.Energy,self.Mu,label=self.Label)
