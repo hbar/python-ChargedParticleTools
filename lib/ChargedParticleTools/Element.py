@@ -18,7 +18,7 @@ class Element(object):
 				self.symbol = Symbol[i]
 				self.name = Name[i]
 				self.ionization = Ionization[i]
-				self.a = self.Z / ZA[i]
+				self.a = self.z / ZA[i]
 				self.density = Density[i]
 
 #Mo = Element('Mo')
