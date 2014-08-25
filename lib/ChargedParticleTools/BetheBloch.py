@@ -4,9 +4,12 @@ from numpy import *
 from constants import *
 
 
-def IonStopping(beta,element,density,zIon=1) 
+class IonStopping(energy,element,ion,density) 
 
 	C1=[]; C2=[]; C3=[]
+
+	gamma = 1.0 + energy/ion.m0
+	beta = sqrt(1.0-1.0/gamma**2)
 
 	for i in range(len(element)):
 		Zt = element[i].z
