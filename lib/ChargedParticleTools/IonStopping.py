@@ -16,7 +16,7 @@ class IonStopping(energy,element,ion,density)
 
 		C1.append( ((q0**2)/(4.0*pi*ep0))**2 )
 
-		C2.apped( (4.0 * pi * zIon**2 * density[i] * Zt * rho)/(Me * A) )
+		C2.apped( (4.0 * pi * ion.z**2 * density[i] * Zt * rho)/(Me * A) )
 
 		C3.append( 2.0 * me * beta**2 / (element[i].ionization * (1.0-beta) ) )
 	

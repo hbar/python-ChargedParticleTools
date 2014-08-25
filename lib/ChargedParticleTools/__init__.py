@@ -4,3 +4,4 @@ from SRIMData import *
 from XRayAttenuation import *
 from DensityProfiles import *
 from IonizationCrossSection import *
+from IonStopping import *
