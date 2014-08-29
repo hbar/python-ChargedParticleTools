@@ -1,5 +1,5 @@
 from numpy import *
-
+from Constants import *
 
 class Element(object):
 

@@ -1,4 +1,5 @@
-## Constanst
+## Constants
+from numpy import *
 
 c0 = 299792458 # speed of light [m/s]
 q0 = 1.60217656535e-19 # elementary charge [Coul] 
